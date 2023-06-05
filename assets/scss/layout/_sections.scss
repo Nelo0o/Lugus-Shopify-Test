@@ -1,0 +1,324 @@
+.product {
+  margin: 70px 0 238px;
+
+  &__img {
+    margin-left: 70px;
+  }
+
+  &__infos {
+    grid-column: 7 / span 6;
+    margin: 30px 0 0 30px;
+
+    h1 {
+      font: {
+        family: $font-1;
+        size: pxToRem(30);
+      }
+      margin-bottom: 25px;
+    }
+
+    .price {
+      font: {
+        family: $font-1;
+        size: pxToRem(25);
+      }
+      color: $blue;
+      margin-bottom: 25px;
+    }
+
+    .primary {
+      width: 88px;
+      height: 34px;
+      background: $blue;
+      font: {
+        size: pxToRem(15);
+      }
+      color: $white-1;
+      text-transform: uppercase;
+      border-radius: 37px;
+    }
+
+    .secondary {
+      @extend .primary;
+      width: 98px;
+      background: $white-1;
+      border: solid 1px $blue;
+      color: $blue;
+    }
+
+    .container-btn {
+      display: flex;
+      gap: 10px;
+      font: {
+        family: $font-2;
+        weight: map-get($font-weight, "regular");
+      }
+    }
+
+    .colors,
+    .size {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 25px;
+
+      span {
+        font: {
+          family: $font-2;
+          size: pxToRem(13);
+          weight: map-get($font-weight, "regular");
+        }
+        color: map-get($gray, "gray-4");
+      }
+    }
+
+    .size {
+      margin-bottom: 37px;
+
+      .primary {
+        width: 50px;
+        height: 34px;
+      }
+    }
+
+    .number {
+      width: 129px;
+      height: 46px;
+      font: {
+        family: $font-1;
+        size: pxToRem(20);
+      }
+      color: $white-1;
+      background: $blue;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-radius: 3px;
+      margin-bottom: 39px;
+
+      button {
+        color: $white-1;
+        font-size: pxToRem(25);
+      }
+    }
+
+    p {
+      width: calc(100% - 100px);
+      font: {
+        family: $font-2;
+        weight: map-get($font-weight, "regular");
+        size: pxToRem(16);
+      }
+      line-height: 160%;
+      color: map-get($gray, "gray-3");
+      margin-bottom: 35px;
+    }
+
+    .finalization-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      button {
+        max-width: 343px;
+        width: 100%;
+        height: 50px;
+        font: {
+          family: $font-3;
+          weight: map-get($font-weight, "Bold");
+          size: pxToRem(16);
+        }
+        text-transform: uppercase;
+      }
+
+      .add-cart {
+        border: solid 1px $blue;
+        border-radius: 3px;
+        color: $blue;
+      }
+
+      .buy {
+        background: $blue;
+        color: $white-1;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    margin: 23px 0 74px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__img {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 327px;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__infos {
+      margin: 62px 0 0 0;
+
+      h1 {
+        font: {
+          size: pxToRem(20);
+        };
+        margin-bottom: 8px;
+      }
+
+      .size {
+        margin-bottom: 58px;
+      }
+
+      .number {
+        width: 111px;
+        height: 39px;
+        margin-bottom: 35px;
+
+        font: {
+          size: pxToRem(16);
+        };
+
+        button {
+          font-size: pxToRem(20);
+        }
+      }
+
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.feedback {
+  height: auto;
+  display: flex;
+  justify-content: center;
+
+  .container-feedback {
+    width: 100%;
+    text-align: center;
+
+    h2 {
+      font: {
+        family: $font-1;
+        weight: map-get($font-weight, "regular");
+        size: pxToRem(25);
+      }
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .note {
+      font: {
+        family: $font-2;
+        weight: map-get($font-weight, "Semi-Bold");
+        size: pxToRem(18);
+      }
+      color: $blue;
+    }
+
+    &__cards {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 23px;
+
+      &--feedback-card {
+        max-width: 604px;
+        width: 100%;
+        min-height: 110px;
+        height: fit-content;
+        background: $white-2;
+        border-radius: 3px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .container-infos {
+          display: flex;
+          justify-content: space-between;
+
+          .text {
+            text-align: left;
+            font: {
+              family: $font-2;
+              weight: map-get($font-weight, "Semi-Bold");
+              size: pxToRem(15);
+            }
+            width: calc(100% - 90px);
+          }
+        }
+
+        .name {
+          text-align: left;
+          font: {
+            family: $font-2;
+            weight: map-get($font-weight, "Semi-Bold");
+            size: pxToRem(15);
+          }
+          color: map-get($gray, "gray-2");
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: map-get($breakpoints, "md")) {
+    .container-feedback {
+
+      h2 {
+        font: {
+          size: pxToRem(18);
+        };
+        margin-bottom: 11px;
+      }
+
+      .note {
+        font: {
+          size: pxToRem(16);
+        };
+      }
+
+      &__cards {
+
+        &--feedback-card {
+
+          .container-infos {
+
+            .text {
+              font: {
+                size: pxToRem(13);
+              };
+              width: calc(100% - 50px);
+            }
+
+            .note {
+              font: {
+                size: pxToRem(14);
+              };
+            }
+          }
+
+          .name {
+            font: {
+              size: pxToRem(13);
+            };
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

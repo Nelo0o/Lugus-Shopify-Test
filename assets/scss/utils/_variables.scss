@@ -1,0 +1,40 @@
+// Colors
+$blue: #4374EF;
+$black: #000000;
+$white-1: #FFFFFF;
+$white-2: #F6F8FC;
+
+$gray: (
+        gray-1: #3C3C3C,
+        gray-2: #B5B5B5,
+        gray-3: #525252,
+        gray-4: #6C6C6C,
+);
+
+// Typography
+$font-1: 'Fjalla One', sans-serif;
+$font-2: 'Cabin', sans-serif;
+$font-3: 'Roboto', sans-serif;
+
+$font-weight: (
+        regular: 400,
+        medium: 500,
+        Semi-Bold: 600,
+        Bold: 700,
+);
+
+
+// Spacing
+$wrapper: 25px;
+
+// Grid params
+$container: 1440px - 119px;
+$grid-columns: 12;
+$grid-gap: 10px;
+$side-spacing: 119px;
+
+// Breakpoints
+$breakpoints: (
+        md: 768px,
+        lg: 1280px,
+);
