@@ -330,6 +330,10 @@ template {
   background: none;
 }
 
+html {
+  color-scheme: light;
+}
+
 .wrapper {
   padding-left: 25px;
   padding-right: 25px;
