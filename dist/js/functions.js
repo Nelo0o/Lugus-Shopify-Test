@@ -152,8 +152,8 @@ export function displayProduct(data) {
 
     const blue = document.querySelector(".container-btn-colors .primary");
     const yellow = document.querySelector(".container-btn-colors .secondary");
-    const mSize = document.querySelector(".container-btn-size .secondary");
     const lSize = document.querySelector(".container-btn-size .primary");
+    const mSize = document.querySelector(".container-btn-size .secondary");
 
     function updateImageAndVariant(color, size) {
         const imageKey = color + size;
@@ -167,12 +167,12 @@ export function displayProduct(data) {
             blue.classList.add("primary");
             blue.classList.remove("secondary");
             yellow.classList.add("secondary");
-
+            yellow.classList.remove("primary");
         } else if (color === "Yellow") {
             yellow.classList.add("primary");
             yellow.classList.remove("secondary");
             blue.classList.add("secondary");
-
+            blue.classList.remove("primary");
         }
 
         const size = lSize.classList.contains("primary") ? "L" : "M";
@@ -184,17 +184,18 @@ export function displayProduct(data) {
             lSize.classList.add("primary");
             lSize.classList.remove("secondary");
             mSize.classList.add("secondary");
-
+            mSize.classList.remove("primary");
         } else if (size === "M") {
             mSize.classList.add("primary");
             mSize.classList.remove("secondary");
             lSize.classList.add("secondary");
-
+            lSize.classList.remove("primary");
         }
 
         const color = blue.classList.contains("primary") ? "Blue" : "Yellow";
         updateImageAndVariant(color, size);
     }
+
 
     yellow.addEventListener("click", () => handleColorClick("Yellow"));
     blue.addEventListener("click", () => handleColorClick("Blue"));
@@ -217,6 +218,7 @@ export function displayProduct(data) {
     document.querySelector(".price").innerText = `${price} €`;
     document.querySelector(".desc").innerText = description;
 }
+
 
 // Cette fonction permet de rechercher l'ID d'un variant spécifique dans un tableau en fonction de la taille et de la couleur fournies
 function getVariantID(variants, color, size) {
