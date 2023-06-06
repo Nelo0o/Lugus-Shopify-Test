@@ -219,7 +219,6 @@ export function displayProduct(data) {
     document.querySelector(".desc").innerText = description;
 }
 
-
 // Cette fonction permet de rechercher l'ID d'un variant spécifique dans un tableau en fonction de la taille et de la couleur fournies
 function getVariantID(variants, color, size) {
     const variant = variants.find(variant => variant.color === color && variant.size === size);
