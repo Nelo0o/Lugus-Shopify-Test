@@ -451,6 +451,8 @@ body {
 }
 .product__img {
   margin-left: 70px;
+  width: 490px;
+  height: 490px;
 }
 .product__infos {
   grid-column: 7/span 6;
@@ -568,13 +570,8 @@ body {
   }
   .product__img {
     margin: 0;
-    display: flex;
-    justify-content: center;
-  }
-  .product__img img {
-    max-width: 327px;
     width: 100%;
-    height: auto;
+    height: 327px;
   }
   .product__infos {
     margin: 62px 0 0 0;
