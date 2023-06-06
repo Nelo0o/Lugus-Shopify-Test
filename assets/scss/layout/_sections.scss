@@ -5,6 +5,12 @@
     margin-left: 70px;
     width: 490px;
     height: 490px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
   }
 
   &__infos {
@@ -48,7 +54,8 @@
       color: $blue;
     }
 
-    .container-btn {
+    .container-btn-colors,
+    .container-btn-size {
       display: flex;
       gap: 10px;
       font: {

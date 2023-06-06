@@ -346,6 +346,7 @@ html {
 
 button {
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -425,11 +426,15 @@ body {
     top: 26px;
   }
   .header .container-icons {
+    height: fit-content;
     position: fixed;
     top: 30px;
     right: 15px;
     z-index: 500;
     align-items: initial;
+  }
+  .header .container-icons a {
+    height: fit-content;
   }
   .header .container-icons a:nth-child(2) {
     display: none;
@@ -453,6 +458,11 @@ body {
   margin-left: 70px;
   width: 490px;
   height: 490px;
+}
+.product__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 .product__infos {
   grid-column: 7/span 6;
@@ -484,7 +494,8 @@ body {
   border: solid 1px #4374EF;
   color: #4374EF;
 }
-.product__infos .container-btn {
+.product__infos .container-btn-colors,
+.product__infos .container-btn-size {
   display: flex;
   gap: 10px;
   font-family: "Cabin", sans-serif;

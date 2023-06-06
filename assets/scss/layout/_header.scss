@@ -83,6 +83,7 @@
     }
 
     .container-icons {
+      height: fit-content;
       position: fixed;
       top: 30px;
       right: 15px;
@@ -90,6 +91,7 @@
       align-items: initial;
 
       a {
+        height: fit-content;
         &:nth-child(2) {
           display: none;
         }
